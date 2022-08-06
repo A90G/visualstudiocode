@@ -1,8 +1,8 @@
-let botonDecrementar = document.getElementsByClassName("decrementar");
-let botonIncrementar = document.getElementsByClassName("incrementar");
-let botonSumar = document.getElementsByClassName("sumar");
-let myInput= document.getElementsByClassName("resultado");
-let theSpan= document.getElementsByClassName("contador");
+let botonDecrementar = document.getElementById("decrementar");
+let botonIncrementar = document.getElementById("incrementar");
+let botonSumar = document.getElementById("sumar");
+let myInput= document.getElementById("resultado");
+let theSpan= document.getElementById("contador");
 
 let cantidad=0;
 
@@ -19,9 +19,11 @@ function incrementar() {
    }
    
 function sumar() {
-    cantidad--;
-    console.log("decrementar"+cantidad)
+    cantidad+= parseInt(myInput.value);
+    theSpan.innerHTML=cantidad;
+    console.log("sumar"+cantidad);
    }
 
    botonDecrementar.addEventListener("click", decrementar);
    botonIncrementar.addEventListener("click", incrementar);
+   botonSumar.addEventListener("click", sumar);
