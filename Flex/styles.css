@@ -1,23 +1,69 @@
-body {
-    font-family: sans-serif;
+body{
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.encabezado {
+  display: flex;
+  flex-direction: row; /*diferencia */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: grey;
+  border-radius: 5px;
+  border: 1px solid black;/*diferencia acabo de sumar */
+  height:fit-content;
+  
   }
-  .container {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    flex-direction: row;
-    background-color: grey;
-    padding: 5px;
-    border-radius: 10px;
-  }
-  .container div{
-    text-align: center;
-    font-size: 10px;
-    border: 2px solid black;
-    margin-top: 10px;
-    margin-left: 50px;
-    padding-bottom: 0px;
-  }
+.encabezado div {
+  padding: 10px;
+  margin: 20px;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.order0 {
+  width: 60%;
+  order: 1;
+}
+.order1 {
+  border: 1px solid black;
+  width: 30%;
+  order: 2;
+  background-color: green;
+  color: aliceblue;
+}
+.order2 {
+  border: 1px solid black;
+  width: 15%;
+  order:3;
+  background-color: #000480;
+  color: aliceblue;
+}
+.order3 {
+  border: 1px solid black;
+  width: 45%;
+  order: 4;
+  background-color: rgb(84, 4, 4);
+  color: aliceblue;
+}
+.bloqueCentralSup {
+  display: flex;
+  flex-direction: row;
+  margin: 1%;
+}
+.bloqueCentralInf {
+  display: flex;
+  flex-direction: row;
+  margin: 1%;
+}
+.pie {
+  display: flex;
+  flex-direction: row;
+  background-color: lightblue;
+  margin: 1%;
+}
  /*  .order1{
     background-color: green;
     height: 25px;
