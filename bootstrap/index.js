@@ -17,11 +17,13 @@ let agregarProducto = () => {
     let cant = parseInt(document.querySelector(".myInputCant").value);
     arrayCantidad.push(cant);
     let nuevoProducto = document.createElement("li");
+    calcularSubTotal();
     nuevoProducto.innerHTML = cant +" unidades de "+ prod + "  $ "+ prec;
     miLista.appendChild(nuevoProducto);
-    prod.value = "";
-    prec.value = "";
-    cant.value = "";
+    producto.value = "";
+    precio.value = "";
+    cantidad.value = "";
+    calcularTotal();
   }
   
   let eliminarLast = () => {
@@ -36,6 +38,8 @@ let agregarProducto = () => {
     arrayPrecios = [];
     arrayCantidad = [];
     miLista.innerHTML = "";
+    resultado=0;
+    total=0;
   }
 
   let calcularSubTotal = () => {
@@ -61,6 +65,6 @@ botonEliminarUltimo.addEventListener("click", eliminarLast);
 let botonEliminarAll = document.querySelector(".removeAll");
 botonEliminarAll.addEventListener("click", eliminarAll);
 /*let botonSubTotal = document.querySelector(".calcularSubCompra");
-botonSubTotal.addEventListener("click", calcularSubTotal);*/
+botonSubTotal.addEventListener("click", calcularSubTotal);
 let botonTotal = document.querySelector(".calcularCompra");
-botonTotal.addEventListener("click", calcularTotal);
+botonTotal.addEventListener("click", calcularTotal);*/

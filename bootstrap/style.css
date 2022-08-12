@@ -1,32 +1,38 @@
-.flex-body{
-    display: flex;
-    flex-direction: column;
-  }
-.flex-nav {
-    display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height:fit-content;
-  }
 .flex-card {
-        display: flex;
-        flex-direction: column; 
-        flex-wrap: wrap;
-        justify-content:flex-start;
-        padding: 10px;
-        margin: 5px;
-        width: 20px;
-        height: 30px;
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  padding: 10px;
+  margin: 5px;
+  height: fit-content;
+  align-content: space-between;
   }
-.card, .card-body {
-        border-radius: 5px;  
-            }
-.flexBotoneras {
-              display: flex;
-              flex-direction: column; 
-              flex-wrap: wrap;
-              justify-content:flex-end;
-  background-color: goldenrod;
+.card {
+  width: 30%;
+  height: 50%;
+  border-radius: 5px;  
+
 }
+.flexBotoneras {
+display: flex;
+flex-direction: column; 
+flex-wrap: wrap;
+justify-content:center;
+padding: 10px;
+margin: 5px;
+border-radius: 5px;
+align-content: center;
+background-color: goldenrod;
+}
+.carrito {
+  display: flex;
+  flex-direction: column; 
+  flex-wrap: wrap;
+  justify-content:center;
+  padding-left: 50px;
+  margin: 5px;
+  align-content: center;
+  background-color: rgb(218, 32, 178);
+  }
   
