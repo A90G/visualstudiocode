@@ -17,8 +17,7 @@ let agregarProducto = () => {
     let cant = parseInt(document.querySelector(".myInputCant").value);
     arrayCantidad.push(cant);
     let nuevoProducto = document.createElement("li");
-    calcularSubTotal();
-    nuevoProducto.innerHTML = cant +" unidades de "+ prod + "  $ "+ prec;
+    nuevoProducto.innerHTML = cant +" unidades de "+ prod + "  $ "+ prec + " Subtotal: $ "+ cant*prec;
     miLista.appendChild(nuevoProducto);
     producto.value = "";
     precio.value = "";
