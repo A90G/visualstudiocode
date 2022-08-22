@@ -1,0 +1,28 @@
+.icon{
+    max-width: 100px;
+}
+.backSedan{
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius:  15px;
+    border-bottom-left-radius:  15px;
+}
+.backSuvs{
+    background-color: hsl(184, 100%, 22%);
+    border-radius: 0px;
+}
+.backLux{
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.styleBttn{
+    border-radius: 25px;
+    height: 50px;
+    max-width: 150px;
+}
+.styleBttn:hover{
+    background-color: hsla(0, 0%, 100%, 0.75);
+    border-radius: 25px;
+    height: 50px;
+    max-width: 150px;
+}
