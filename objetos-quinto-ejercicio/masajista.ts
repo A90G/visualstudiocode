@@ -22,9 +22,9 @@ public brindarMasaje(futbolista: Futbolista): any {
   for (let i: number = 0; i < this.plantel.length; i++) {
     if (futbolista.getNombre() === this.plantel[i].getNombre()) {
       this.plantel[i].setEstadoFisico(100);
-        return console.log(`Futbolista ${futbolista.getNombre()} está relajado y listo para el viaje`);
+        return (`Futbolista ${futbolista.getNombre()} está relajado y listo para el viaje`);
       } 
     }
-    return console.log(`Futbolista: ${futbolista.getNombre()} , revisar Estado Físico antes del viaje`);
+    return (`Futbolista: ${futbolista.getNombre()} , revisar Estado Físico antes del viaje`);
   }
 }

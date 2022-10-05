@@ -36,9 +36,9 @@ public entrenamiento(){
 
 public entrenamientoCompleto(){
     if (this.estadoFisico >= 90){
-        return  console.log('Me voy a dar un masaje');
+        console.log('Me voy a dar un masaje');
     } else {
-        return  console.log('Continuaré entrenando...');
+        console.log('Continuaré entrenando...');
     } 
 }
 
@@ -53,7 +53,7 @@ public cambiarCategoria(): void {
 public covid(): void {
     if (this.estadoFisico <= 40){
         this.estadoFisico +- 20;
-        return console.log("El jugador es COVID positivo deberá realizar cuarentena")
+        console.log("El jugador es COVID positivo deberá realizar cuarentena")
     }
 }
 
