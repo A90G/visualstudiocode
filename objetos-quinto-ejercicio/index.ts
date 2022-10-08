@@ -15,7 +15,8 @@ let plantel1 = [jugador1, jugador2, jugador3, jugador4];
 let entrenador1 = new Entrenador("Diego", "Simeone", 55, plantel1);
 let masajista1 = new Masajista("Miguel", "Di Lorenzo", 57, plantel1);
 
-// jugador1.cambiarCategoria();
-// jugador2.entrenamientoCompleto();
-// jugador3.covid();
-//console.log(jugador4.getEstadoFisico());
+jugador1.cambiarCategoria();
+jugador2.entrenamientoCompleto();
+jugador3.covid();
+console.log(jugador4.getEstadoFisico());
+console.log(jugador1.getCategoria());

@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var carnivoro_1 = require("./carnivoro");
+var hervivoro_1 = require("./hervivoro");
+var omnivoro_1 = require("./omnivoro");
+var yogui = new omnivoro_1.Omnivoro(355, 80, "variada");
+var mufaza = new carnivoro_1.Carnivoro(567, 90, "carne");
+var dumbo = new hervivoro_1.Hervivoro(22, 1000, "hojas verdes");
+var spirit = new hervivoro_1.Hervivoro(378, 113, "pasto");
+//yogui.getAlimentacion();
+mufaza.comer(200);
+//dumbo.getId();
+//spirit.getTipoAlimento();

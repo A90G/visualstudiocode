@@ -1,4 +1,4 @@
-const fs = require('fs');
+import * as fs from 'fs';
 
 class Book {
     private title: string;
@@ -118,6 +118,4 @@ console.log(b3); */
 
 let texto: string = fs.readFileSync('readme.txt', 'utf8');
 
-let palabras: string[] = texto.split(' ');
-
-console.log(palabras);
+console.log(texto);

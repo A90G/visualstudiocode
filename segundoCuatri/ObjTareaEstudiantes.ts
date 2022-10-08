@@ -7,13 +7,15 @@ class Alumnos {
     private nota1:number;
     private nota2:number;
     private nota3:number;
+    private estado: string;
 
-    constructor (pNombre:string, pApellido:string, pNota1:number, pNota2:number, pNota3:number){
+    constructor (pNombre:string, pApellido:string, pNota1:number, pNota2:number, pNota3:number, pEstado:string){
     this.nombre=pNombre;
     this.apellido=pApellido;
     this.nota1=pNota1;
     this.nota2=pNota2;
     this.nota3=pNota3;
+    this.estado=pEstado;
     }
 
  /*cada get con su set para practicar*/
@@ -68,6 +70,14 @@ public getCalificacion3(): string{
        return "Desaprobado";
    }
 }
+
+changeEstado ():void {
+   if (this.estado === "Expulsado"){
+       this.estado = "Matriculado";
+   }else{ 
+       this.estado = "Expulsado";
+   }
+}
 /*posible camino b: crear un promedio de las 3 notas dadas y pasarlo por el calificador, pero no se ajusta con la consigna */
 }
 
@@ -107,13 +117,33 @@ changeContrato ():void {
 }
 
 
-class Escuela {}
+class Escuela {
+   private institucion:string;
+   private listadoProfesores:Profesores[];
 
-let alumno1 = new Alumnos("Juan", "Garcia", 5, 6, 7);
-let alumno2 = new Alumnos ("Maria","Gomez", 4,7,9);
-let alumno3 = new Alumnos ("Pietro","Duran",8,8,8);
+       constructor(pInstitucion:string, pListadoProfesores:Profesores[]) {
+           this.institucion =pInstitucion;
+           this.listadoProfesores = pListadoProfesores;
+       }
+
+public getInstitucion():string {
+    return this.institucion;
+ }
+ public setInstitucion(pInstitucion): string {
+   return this.institucion = pInstitucion;
+}
+
+}
+
+let alumno1 = new Alumnos("Juan", "Garcia", 5, 6, 7, "Matriculado");
+let alumno2 = new Alumnos ("Maria","Gomez", 4,7,9, "Matriculado");
+let alumno3 = new Alumnos ("Pietro","Duran",8,8,8, "Matriculado");
 
 let listadoAl: Alumnos[] = [alumno1,alumno2,alumno3];
 
 let profe1 = new Profesores("Juan", "Lastra", listadoAl, "Contratado");
 let profe2 = new Profesores("Cecilia","Collado", listadoAl, "Contratado");
+
+let listadoPr: Profesores[] = [profe1,profe2];
+
+let secundaria = new Escuela("Nº1233",listadoPr);

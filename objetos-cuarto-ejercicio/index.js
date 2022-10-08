@@ -1,4 +1,6 @@
-var fs = require('fs');
+"use strict";
+exports.__esModule = true;
+var fs = require("fs");
 var Book = /** @class */ (function () {
     function Book(pTitle, pAuthor, pEditorial, pidentificationCode) {
         this.title = pTitle;
@@ -91,5 +93,4 @@ bm1.consultBook(b1);
 bm1.modifyData(b3,"blanco","Negro","xx",44);
 console.log(b3); */
 var texto = fs.readFileSync('readme.txt', 'utf8');
-var palabras = texto.split(' ');
-console.log(palabras);
+console.log(texto);
