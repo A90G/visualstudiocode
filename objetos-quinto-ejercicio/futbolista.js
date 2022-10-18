@@ -25,22 +25,22 @@ var Futbolista = /** @class */ (function (_super) {
         _this.categoria = pCategoria;
         return _this;
     }
-    Futbolista.prototype.getNombreFutbolista = function () {
-        return this.nombre;
-    };
     Futbolista.prototype.setEstadoFisico = function (pEstadoFisico) {
-        this.estadoFisico = 70;
+        this.estadoFisico = pEstadoFisico;
     };
     Futbolista.prototype.getEstadoFisico = function () {
+        if (this.estadoFisico === 0) {
+            throw new Error("persona no calificada");
+        }
         return this.estadoFisico;
     };
     Futbolista.prototype.setCategoria = function (pCategoria) {
-        this.categoria = "Jugador de Primera";
+        this.categoria = pCategoria;
     };
     Futbolista.prototype.getCategoria = function () {
         return this.categoria;
     };
-    Futbolista.prototype.entrenamiento = function () {
+    Futbolista.prototype.entrenar = function () {
         this.estadoFisico += 10;
     };
     Futbolista.prototype.entrenamientoCompleto = function () {
