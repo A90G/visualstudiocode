@@ -19,6 +19,9 @@ public setEstadoFisico(pEstadoFisico: number){
   }
 
 public getEstadoFisico(){
+  if(this.estadoFisico === 0){
+    throw new Error ("persona no calificada");
+  }
     return this.estadoFisico;
   }
 

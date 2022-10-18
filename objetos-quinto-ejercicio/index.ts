@@ -20,3 +20,10 @@ jugador2.entrenamientoCompleto();
 jugador3.covid();
 console.log(jugador4.getEstadoFisico());
 console.log(jugador1.getCategoria());
+try {
+    jugador4.getEstadoFisico();
+
+}catch(error){
+    console.log("error en cero");
+
+}

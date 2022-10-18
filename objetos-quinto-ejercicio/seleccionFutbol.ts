@@ -32,15 +32,15 @@ public getEntrenador(): Entrenador {
  public modificarEntrenador(pEntrenadorContratado): Entrenador {
    return this.entrenadorContratado = pEntrenadorContratado;
 } 
-/*public viaje(): void{
-   if(this.plantel.getEstadoFisico === 100){QUIERO CREAR UN MÉTODO QUE ME DIGA SI TODOS LOS FUTBOLISTAS
-    DEL PLANTEL ESTÁN ENTRENADOS. POR CUESTIONES DE TIEMPO NO LO PUDE TERMINAR PERO ESTIMO QUE TENGO QUE CREAR UNA CLASE PLANTEL Y COMO NO LO TENGO,
-    NO LO PUEDO FINALIZAR.
-       return "Apto para formar parte de la Selección que se va de viaje";
-   }else{
-       return "Continuar entrenando, no está listo";
+public viajar(): void{
+   let mensaje: string;
+   //quiero decir, si el plantel está asignado, masajista y entrenador tmb entonces que salga el mensaje
+   if (this.plantel === Futbolista[] &&  this.masajistaContratado === Masajista && this.entrenadorContratado === Entrenador){
+      mensaje = "Selección lista para salir de viaje";
+   }else{ 
+      mensaje = "Viaje en fase: planificación";
    }
-}*/
+}
 
 //se pueden establecer funciones para cambiar el masajista y el entrenador
 }
