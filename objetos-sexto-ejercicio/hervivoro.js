@@ -20,16 +20,8 @@ var mamiferos_1 = require("./mamiferos");
 var Hervivoro = /** @class */ (function (_super) {
     __extends(Hervivoro, _super);
     function Hervivoro(pId, pAlimentacion, pTipoAlimento) {
-        var _this = _super.call(this, pId, pAlimentacion) || this;
-        _this.tipoAlimento = pTipoAlimento;
-        return _this;
+        return _super.call(this, pId, pAlimentacion, pTipoAlimento) || this;
     }
-    Hervivoro.prototype.getTipoAlimento = function () {
-        return this.tipoAlimento;
-    };
-    Hervivoro.prototype.setTipoAlimento = function (pTipoAlimento) {
-        return this.tipoAlimento = pTipoAlimento;
-    };
     Hervivoro.prototype.comer = function (kgs) {
         if (this.alimentacion >= kgs) {
             console.log("Puede alimentar al animal con el tipo de hoja que prefiera");

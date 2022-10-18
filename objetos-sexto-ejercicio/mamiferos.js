@@ -2,9 +2,10 @@
 exports.__esModule = true;
 exports.Mamiferos = void 0;
 var Mamiferos = /** @class */ (function () {
-    function Mamiferos(pId, pAlimentacion) {
+    function Mamiferos(pId, pAlimentacion, pTipoAlimento) {
         this.ID = pId;
         this.alimentacion = pAlimentacion;
+        this.tipoAlimento = pTipoAlimento;
     }
     /*cada get con su set para practicar*/
     Mamiferos.prototype.getId = function () {
@@ -18,6 +19,12 @@ var Mamiferos = /** @class */ (function () {
     };
     Mamiferos.prototype.setAlimentacion = function (pAlimentacion) {
         return this.alimentacion = pAlimentacion;
+    };
+    Mamiferos.prototype.getTipoAlimento = function () {
+        return this.tipoAlimento;
+    };
+    Mamiferos.prototype.setTipoAlimento = function (pTipoAlimento) {
+        return this.tipoAlimento = pTipoAlimento;
     };
     Mamiferos.prototype.comer = function (kgs) {
         if (this.alimentacion >= kgs) {
