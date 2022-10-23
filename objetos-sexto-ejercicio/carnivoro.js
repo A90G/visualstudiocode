@@ -20,17 +20,8 @@ var mamiferos_1 = require("./mamiferos");
 var Carnivoro = /** @class */ (function (_super) {
     __extends(Carnivoro, _super);
     function Carnivoro(pId, pAlimentacion, pTipoAlimento) {
-        var _this = _super.call(this, pId, pAlimentacion) || this;
-        _this.tipoAlimento = pTipoAlimento;
-        return _this;
+        return _super.call(this, pId, pAlimentacion, pTipoAlimento) || this;
     }
-    /*cada get con su set para practicar*/
-    Carnivoro.prototype.getTipoAlimento = function () {
-        return this.tipoAlimento;
-    };
-    Carnivoro.prototype.setTipoAlimento = function (pTipoAlimento) {
-        return this.tipoAlimento = pTipoAlimento;
-    };
     Carnivoro.prototype.comer = function (kgs) {
         if (this.alimentacion >= kgs) {
             console.log("Puede alimentar al animal con el tipo de carne que prefiera");
