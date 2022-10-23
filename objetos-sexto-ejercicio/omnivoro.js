@@ -20,16 +20,8 @@ var mamiferos_1 = require("./mamiferos");
 var Omnivoro = /** @class */ (function (_super) {
     __extends(Omnivoro, _super);
     function Omnivoro(pId, pAlimentacion, pTipoAlimento) {
-        var _this = _super.call(this, pId, pAlimentacion) || this;
-        _this.tipoAlimento = pTipoAlimento;
-        return _this;
+        return _super.call(this, pId, pAlimentacion, pTipoAlimento) || this;
     }
-    Omnivoro.prototype.getTipoAlimento = function () {
-        return this.tipoAlimento;
-    };
-    Omnivoro.prototype.setTipoAlimento = function (pTipoAlimento) {
-        return this.tipoAlimento = pTipoAlimento;
-    };
     Omnivoro.prototype.comer = function (kgs) {
         if (this.alimentacion >= kgs) {
             console.log("Puede alimentar al animal con carne, pescado, frutas y verduras");
